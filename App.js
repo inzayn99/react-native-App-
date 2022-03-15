@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+
 export default function App() {
+  const [outputText, setOutputText] = useState('Welcome to react native');
   return (
     <View style={styles.container}>
-      <Text>Welcome to react native</Text>
-      <Button title="Change text" />
+      <Text>{outputText}</Text>
+      <Button title="Change text" onPress={()=> setOutputText('The Text Changed!')} />
 
     </View>
   );
